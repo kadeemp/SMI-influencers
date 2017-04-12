@@ -4,6 +4,7 @@
   "description": "api readme",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jasmine-node spec/"
   },
   "author": "",
@@ -16,6 +17,6 @@
     "jasmine-node": "^1.14.5"
   }, 
   "engines": {
-    "node": "6.10.2"
+    "node": "^6.10.2"
   }
 }
