@@ -13,6 +13,8 @@
 		5C1752A11E9DA7A1004CD0A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C17529F1E9DA7A1004CD0A4 /* Main.storyboard */; };
 		5C1752A31E9DA7A1004CD0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1752A21E9DA7A1004CD0A4 /* Assets.xcassets */; };
 		5C1752A61E9DA7A1004CD0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1752A41E9DA7A1004CD0A4 /* LaunchScreen.storyboard */; };
+		A31FEC021E9EA9DD00A28723 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FEC011E9EA9DD00A28723 /* FBSDKLoginKit.framework */; };
+		A31FEC041E9EAC3F00A28723 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FEC031E9EAC3F00A28723 /* FBSDKCoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5C1752A21E9DA7A1004CD0A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C1752A51E9DA7A1004CD0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C1752A71E9DA7A1004CD0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A31FEC011E9EA9DD00A28723 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A31FEC031E9EAC3F00A28723 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4.21.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31FEC021E9EA9DD00A28723 /* FBSDKLoginKit.framework in Frameworks */,
+				A31FEC041E9EAC3F00A28723 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,65 @@
 		5C1752981E9DA7A0004CD0A4 /* SMI-Influencers */ = {
 			isa = PBXGroup;
 			children = (
-				5C1752991E9DA7A0004CD0A4 /* AppDelegate.swift */,
-				5C17529B1E9DA7A1004CD0A4 /* FirstViewController.swift */,
-				5C17529D1E9DA7A1004CD0A4 /* SecondViewController.swift */,
+				A31FEC001E9EA9BE00A28723 /* Frameworks */,
+				A31FEBFE1E9EA93200A28723 /* API Clients */,
+				A31FEBFB1E9EA91400A28723 /* View Controllers */,
+				A31FEBFD1E9EA92B00A28723 /* Views */,
+				A31FEBFC1E9EA92500A28723 /* Models */,
 				5C17529F1E9DA7A1004CD0A4 /* Main.storyboard */,
-				5C1752A21E9DA7A1004CD0A4 /* Assets.xcassets */,
 				5C1752A41E9DA7A1004CD0A4 /* LaunchScreen.storyboard */,
-				5C1752A71E9DA7A1004CD0A4 /* Info.plist */,
+				A31FEBFF1E9EA95600A28723 /* Assets */,
 			);
 			path = "SMI-Influencers";
+			sourceTree = "<group>";
+		};
+		A31FEBFB1E9EA91400A28723 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C17529B1E9DA7A1004CD0A4 /* FirstViewController.swift */,
+				5C17529D1E9DA7A1004CD0A4 /* SecondViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A31FEBFC1E9EA92500A28723 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A31FEBFD1E9EA92B00A28723 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A31FEBFE1E9EA93200A28723 /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "API Clients";
+			sourceTree = "<group>";
+		};
+		A31FEBFF1E9EA95600A28723 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5C1752991E9DA7A0004CD0A4 /* AppDelegate.swift */,
+				5C1752A21E9DA7A1004CD0A4 /* Assets.xcassets */,
+				5C1752A71E9DA7A1004CD0A4 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		A31FEC001E9EA9BE00A28723 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A31FEC031E9EAC3F00A28723 /* FBSDKCoreKit.framework */,
+				A31FEC011E9EA9DD00A28723 /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +155,7 @@
 				TargetAttributes = {
 					5C1752951E9DA7A0004CD0A4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 7G8EV52YPP;
+						DevelopmentTeam = 373244HPF5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -267,8 +323,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7G8EV52YPP;
+				DEVELOPMENT_TEAM = 373244HPF5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SMI-Influencers/FacebookSDKs-iOS-4.21.0/**",
+				);
 				INFOPLIST_FILE = "SMI-Influencers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SMI-Influencers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,8 +341,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7G8EV52YPP;
+				DEVELOPMENT_TEAM = 373244HPF5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SMI-Influencers/FacebookSDKs-iOS-4.21.0/**",
+				);
 				INFOPLIST_FILE = "SMI-Influencers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.SMI-Influencers";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -308,6 +374,7 @@
 				5C1752AC1E9DA7A1004CD0A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
