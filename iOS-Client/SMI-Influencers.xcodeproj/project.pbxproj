@@ -349,6 +349,7 @@
 /* Begin XCBuildConfiguration section */
 		5C1752A81E9DA7A1004CD0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C137B051EAFDDF700787100 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -400,6 +401,7 @@
 		};
 		5C1752A91E9DA7A1004CD0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C137B071EAFDDF700787100 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -444,7 +446,7 @@
 		};
 		5C1752AB1E9DA7A1004CD0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10D97197C640A57D1905EB81 /* Pods-SMI-Influencers.debug.xcconfig */;
+			baseConfigurationReference = 5C137B051EAFDDF700787100 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 373244HPF5;
@@ -463,7 +465,7 @@
 		};
 		5C1752AC1E9DA7A1004CD0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5014618A6ED366023EDB1194 /* Pods-SMI-Influencers.release.xcconfig */;
+			baseConfigurationReference = 5C137B071EAFDDF700787100 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 373244HPF5;
@@ -482,6 +484,7 @@
 		};
 		A3FA1FF51EAEB51D007A6AE4 /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C137B061EAFDDF700787100 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -533,7 +536,7 @@
 		};
 		A3FA1FF61EAEB51D007A6AE4 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA77CC1A955F410ACE2D82B1 /* Pods-SMI-Influencers.development.xcconfig */;
+			baseConfigurationReference = 5C137B061EAFDDF700787100 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 373244HPF5;
