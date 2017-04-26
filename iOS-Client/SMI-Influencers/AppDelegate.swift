@@ -32,15 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let AnalyticsViewController = storyboard.instantiateViewController(withIdentifier: "AnalyticsVC")
+       // let AnalyticsViewController = storyboard.instantiateViewController(withIdentifier: "AnalyticsVC")
         let LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        let Nav = storyboard.instantiateViewController(withIdentifier: "NavVC")
         
         try tokenA = keychain.get("FBToken")
         if  tokenA != nil {
             
-            self.window?.rootViewController = AnalyticsViewController
+            self.window?.rootViewController = Nav
             self.window?.makeKeyAndVisible()
-            
+        
         } else {
             self.window?.rootViewController = LoginViewController
             self.window?.makeKeyAndVisible()
@@ -48,6 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         //Fabric.with([Twitter.self, Crashlytics.self])
+
+
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         

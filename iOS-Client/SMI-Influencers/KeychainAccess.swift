@@ -13,8 +13,31 @@ class KeychainAccess {
     
     
     let keychain = KeychainSwift()
-    var token:String? = nil
 
+    static let instance = KeychainAccess()
+    
+    func setToken(value:String, key:String) {
+        self.keychain.set(value, forKey: key)
+        
+    }
+    func getToken(key:String) -> String? {
+        let token = self.keychain.get(key)
+        
+        return token
+    }
+    
+    func checkForToken(key:String) -> Bool {
+        
+        let token = self.keychain.get(key)
+        
+        if token != nil {
+            return false
+        } else {
+            
+            return true
+        }
+    }
+    
     
     
 }
