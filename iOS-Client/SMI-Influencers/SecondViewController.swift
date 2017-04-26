@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
         let navBarTitleButton: UIButton = UIButton(frame: CGRect(x: 155, y: 0, width: 100, height: 50))
         navBarTitleButton.backgroundColor = UIColor.clear
         //TODO:- Add a variable that changes depending on who is signed in
+        
         navBarTitleButton.setTitle("Kadeem Palacios", for: .normal)
         navBarTitleButton.addTarget(self, action: #selector(navBarButtonAction), for: .touchUpInside)
         navBarTitleButton.tag = 1
