@@ -11,18 +11,46 @@ import FBSDKCoreKit
 import TwitterKit
 import Fabric
 import Crashlytics
+import KeychainSwift
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let keychain = KeychainSwift()
+    var tokenA:String? = nil
+    var tokenB:String? = nil
+    var tokenC:String? = nil
+    
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+       // let AnalyticsViewController = storyboard.instantiateViewController(withIdentifier: "AnalyticsVC")
+        let LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+        let Nav = storyboard.instantiateViewController(withIdentifier: "NavVC")
+        
+        try tokenA = keychain.get("FBToken")
+        if  tokenA != nil {
+            
+            self.window?.rootViewController = Nav
+            self.window?.makeKeyAndVisible()
+        
+        } else {
+            self.window?.rootViewController = LoginViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
+
         //Fabric.with([Twitter.self, Crashlytics.self])
+
+
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         

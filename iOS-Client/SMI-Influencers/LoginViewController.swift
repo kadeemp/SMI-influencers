@@ -11,8 +11,11 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import TwitterKit
 import Crashlytics
+import KeychainSwift
 
 class LoginViewController: UIViewController {
+    let keychain = KeychainSwift()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +63,8 @@ class LoginViewController: UIViewController {
                 print ("did not auth pages")
                 return
             }
-            
+            let token = FBSDKAccessToken.current().tokenString!
+            self.keychain.set(token, forKey: "FBToken")
             print(FBSDKAccessToken.current().tokenString)
             print(FBSDKAccessToken.current().permissions)
             

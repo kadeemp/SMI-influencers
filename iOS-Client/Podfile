@@ -11,5 +11,6 @@ target 'SMI-Influencers' do
   pod 'Fabric'
   pod 'TwitterKit'
   pod 'Crashlytics'
+  pod 'KeychainSwift', '~> 7.0'
 
 end

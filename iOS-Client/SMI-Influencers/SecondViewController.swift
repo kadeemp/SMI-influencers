@@ -7,26 +7,28 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class SecondViewController: UIViewController {
+    
+    let keychain = KeychainSwift()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
+        
         
         let navBarTitleButton: UIButton = UIButton(frame: CGRect(x: 155, y: 0, width: 100, height: 50))
         navBarTitleButton.backgroundColor = UIColor.clear
         //TODO:- Add a variable that changes depending on who is signed in
+        
         navBarTitleButton.setTitle("Kadeem Palacios", for: .normal)
         navBarTitleButton.addTarget(self, action: #selector(navBarButtonAction), for: .touchUpInside)
         navBarTitleButton.tag = 1
       
         self.navigationItem.titleView = navBarTitleButton
         //let titleButtton = UIButton(frame: CGRect)
-       
-        
-        
-        
-        
+  
     }
 
     @IBOutlet weak var profilePicture: UIImageView!
@@ -37,6 +39,12 @@ class SecondViewController: UIViewController {
         let alert = UIAlertController(title: "Alert Title", message: "Would you like to logout?", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Logout", style: .destructive) { action in
             // perhaps use action.title here
+            self.keychain.clear()
+            let vc = UIStoryboard(name:"Main", bundle:nil).instantiateViewController(withIdentifier: "LoginVC")
+            
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            appDelegate?.window?.rootViewController = vc
+            
         })
         alert.addAction(UIAlertAction(title: "Cancel", style: .default) { action in
             // perhaps use action.title here
