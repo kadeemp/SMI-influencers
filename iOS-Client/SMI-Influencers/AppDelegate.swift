@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if  tokenA != nil {
             
             self.window?.rootViewController = Nav
+//            self.window?.rootViewController = LoginViewController
             self.window?.makeKeyAndVisible()
         
         } else {

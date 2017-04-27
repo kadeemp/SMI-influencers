@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Alamofire
 import FBSDKLoginKit
 import FBSDKCoreKit
 import TwitterKit
 import Crashlytics
+import SwiftyJSON
 import KeychainSwift
 
 class LoginViewController: UIViewController {
@@ -77,13 +79,54 @@ class LoginViewController: UIViewController {
                 print(FBSDKAccessToken.current().tokenString)
                 // make post request to API route /users to create a new user 
                 // in the callback, make get request to /users/uid/facebookStats
-                
+                let params = ["facebook": FBSDKAccessToken.current().tokenString]
+                let url = "https://sm-influencers-api.herokuapp.com/users"
+                Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
+                    
+                    // user created! now let's get some analytics...
+                    
+                    // grab the id from the API response
+                    let jsonObject = JSON(data: response.data!)
+                    if let id = jsonObject["_id"].string {
+//                        print(id)
+                        
+                        // and now we'll use the id to create the url and make the request
+                        
+                        let fbStatsURL = "https://sm-influencers-api.herokuapp.com/users/" + id + "/facebookStats"
+                        
+                        // this takes a few seconds to load
+                        Alamofire.request(fbStatsURL).responseJSON { response in
+                            let userAnalytics = JSON(data: response.data!)
+                            
+                            let user = self.initializePersonObject(userAnalytics: userAnalytics)
+                            print(user)
+                        }
+                        // switch view controller, and show loading screen
+                    }
+                }
             }
-
         }
-        
-        
-        
+    }
+    
+    func initializePersonObject(userAnalytics: JSON) -> Person{
+        // this returns the empty object at the bottom. not sure why
+        if let postImpressions = userAnalytics["postImpressions"].dictionary {
+            if let engagedUsers = userAnalytics["engagedUsers"].dictionary {
+                if let pageViews = userAnalytics["pageViews"].dictionary {
+                    if let totalPageLikes = userAnalytics["totalPageLikes"].string {
+                        if let peopleTalkingAboutPage = userAnalytics["peopleTalkingAboutPage"].dictionary {
+                            if let influxTime = userAnalytics["influxTime"].string {
+                                if let name = userAnalytics["name"].string{
+                                    let person = Person(name: name, postImpressions: postImpressions, peopleTalkingAboutPage: peopleTalkingAboutPage, influxTime: influxTime, pageViews: pageViews, totalPageLikes: totalPageLikes, engagedUsers: engagedUsers);
+                                    return person;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return Person(name: "", postImpressions: [:], peopleTalkingAboutPage: [:], influxTime: "", pageViews: [:], totalPageLikes: "", engagedUsers: [:])
     }
     
     
