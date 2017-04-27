@@ -67,16 +67,18 @@ class LoginViewController: UIViewController {
             self.keychain.set(token, forKey: "FBToken")
             print(FBSDKAccessToken.current().tokenString)
             print(FBSDKAccessToken.current().permissions)
+            
+            FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile", "read_insights", "user_posts", "user_status", "user_videos", "read_audience_network_insights"], from: self) { (result, err) in
+                if err != nil {
+                    print("Custom FB Login failed:" , err)
+                    return
+                }
+                self.showEmailAddress()
+                print(FBSDKAccessToken.current().tokenString)
+            }
+
         }
         
-//        FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile", "read_insights", "user_posts", "user_status", "user_videos", "read_audience_network_insights"], from: self) { (result, err) in
-//            if err != nil {
-//                print("Custom FB Login failed:" , err)
-//                return
-//            }
-//            self.showEmailAddress()
-//            print(FBSDKAccessToken.current().tokenString)
-//        }
         
         
     }
