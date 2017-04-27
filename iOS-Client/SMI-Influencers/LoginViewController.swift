@@ -75,6 +75,9 @@ class LoginViewController: UIViewController {
                 }
                 self.showEmailAddress()
                 print(FBSDKAccessToken.current().tokenString)
+                // make post request to API route /users to create a new user 
+                // in the callback, make get request to /users/uid/facebookStats
+                
             }
 
         }
