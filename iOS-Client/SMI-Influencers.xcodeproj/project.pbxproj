@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C137B081EAFDDF700787100 /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C137B051EAFDDF700787100 /* Debug.xcconfig */; };
-		5C137B091EAFDDF700787100 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C137B061EAFDDF700787100 /* Development.xcconfig */; };
-		5C137B0A1EAFDDF700787100 /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C137B071EAFDDF700787100 /* Release.xcconfig */; };
 		5C17529A1E9DA7A1004CD0A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1752991E9DA7A0004CD0A4 /* AppDelegate.swift */; };
 		5C17529C1E9DA7A1004CD0A4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17529B1E9DA7A1004CD0A4 /* SignInViewController.swift */; };
 		5C17529E1E9DA7A1004CD0A4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17529D1E9DA7A1004CD0A4 /* SecondViewController.swift */; };
@@ -17,6 +14,9 @@
 		5C1752A31E9DA7A1004CD0A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C1752A21E9DA7A1004CD0A4 /* Assets.xcassets */; };
 		5C1752A61E9DA7A1004CD0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C1752A41E9DA7A1004CD0A4 /* LaunchScreen.storyboard */; };
 		5C66B1B51EB1329A00DF6DFC /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66B1B41EB1329A00DF6DFC /* KeychainAccess.swift */; };
+		5C66B1BF1EB1784E00DF6DFC /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C66B1BC1EB1784E00DF6DFC /* Development.xcconfig */; };
+		5C66B1C01EB1784E00DF6DFC /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C66B1BD1EB1784E00DF6DFC /* Release.xcconfig */; };
+		5C66B1C11EB1784E00DF6DFC /* Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 5C66B1BE1EB1784E00DF6DFC /* Debug.xcconfig */; };
 		A31FEC021E9EA9DD00A28723 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FEC011E9EA9DD00A28723 /* FBSDKLoginKit.framework */; };
 		A31FEC041E9EAC3F00A28723 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FEC031E9EAC3F00A28723 /* FBSDKCoreKit.framework */; };
 		D5089FEDAE911AD5A2BB60B9 /* Pods_SMI_Influencers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7ED75559AA3FDC1DD66CAF /* Pods_SMI_Influencers.framework */; };
@@ -28,9 +28,6 @@
 /* Begin PBXFileReference section */
 		10D97197C640A57D1905EB81 /* Pods-SMI-Influencers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMI-Influencers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMI-Influencers/Pods-SMI-Influencers.debug.xcconfig"; sourceTree = "<group>"; };
 		5014618A6ED366023EDB1194 /* Pods-SMI-Influencers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMI-Influencers.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMI-Influencers/Pods-SMI-Influencers.release.xcconfig"; sourceTree = "<group>"; };
-		5C137B051EAFDDF700787100 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		5C137B061EAFDDF700787100 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
-		5C137B071EAFDDF700787100 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		5C1752961E9DA7A0004CD0A4 /* SMI-Influencers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SMI-Influencers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1752991E9DA7A0004CD0A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C17529B1E9DA7A1004CD0A4 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +37,9 @@
 		5C1752A51E9DA7A1004CD0A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C1752A71E9DA7A1004CD0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C66B1B41EB1329A00DF6DFC /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
+		5C66B1BC1EB1784E00DF6DFC /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		5C66B1BD1EB1784E00DF6DFC /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		5C66B1BE1EB1784E00DF6DFC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9D7ED75559AA3FDC1DD66CAF /* Pods_SMI_Influencers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMI_Influencers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31FEC011E9EA9DD00A28723 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A31FEC031E9EAC3F00A28723 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "FacebookSDKs-iOS-4.21.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
@@ -162,9 +162,9 @@
 		A3FA1FF11EAEB4C8007A6AE4 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				5C137B051EAFDDF700787100 /* Debug.xcconfig */,
-				5C137B061EAFDDF700787100 /* Development.xcconfig */,
-				5C137B071EAFDDF700787100 /* Release.xcconfig */,
+				5C66B1BC1EB1784E00DF6DFC /* Development.xcconfig */,
+				5C66B1BD1EB1784E00DF6DFC /* Release.xcconfig */,
+				5C66B1BE1EB1784E00DF6DFC /* Debug.xcconfig */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -243,12 +243,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C137B081EAFDDF700787100 /* Debug.xcconfig in Resources */,
+				5C66B1C01EB1784E00DF6DFC /* Release.xcconfig in Resources */,
 				5C1752A61E9DA7A1004CD0A4 /* LaunchScreen.storyboard in Resources */,
-				5C137B0A1EAFDDF700787100 /* Release.xcconfig in Resources */,
+				5C66B1BF1EB1784E00DF6DFC /* Development.xcconfig in Resources */,
 				5C1752A31E9DA7A1004CD0A4 /* Assets.xcassets in Resources */,
 				5C1752A11E9DA7A1004CD0A4 /* Main.storyboard in Resources */,
-				5C137B091EAFDDF700787100 /* Development.xcconfig in Resources */,
+				5C66B1C11EB1784E00DF6DFC /* Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +353,6 @@
 /* Begin XCBuildConfiguration section */
 		5C1752A81E9DA7A1004CD0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C137B051EAFDDF700787100 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -405,7 +404,6 @@
 		};
 		5C1752A91E9DA7A1004CD0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C137B071EAFDDF700787100 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -450,7 +448,6 @@
 		};
 		5C1752AB1E9DA7A1004CD0A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C137B051EAFDDF700787100 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
@@ -469,7 +466,6 @@
 		};
 		5C1752AC1E9DA7A1004CD0A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C137B071EAFDDF700787100 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
@@ -488,7 +484,6 @@
 		};
 		A3FA1FF51EAEB51D007A6AE4 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C137B061EAFDDF700787100 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -540,7 +535,6 @@
 		};
 		A3FA1FF61EAEB51D007A6AE4 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C137B061EAFDDF700787100 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7G8EV52YPP;
